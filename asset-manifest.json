@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/defaai/static/css/main.4dd0a4c4.css",
+    "main.js": "/defaai/static/js/main.0df8e697.js",
+    "index.html": "/defaai/index.html",
+    "main.4dd0a4c4.css.map": "/defaai/static/css/main.4dd0a4c4.css.map",
+    "main.0df8e697.js.map": "/defaai/static/js/main.0df8e697.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4dd0a4c4.css",
+    "static/js/main.0df8e697.js"
+  ]
+}
