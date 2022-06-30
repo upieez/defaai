@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 import { Outlet } from 'react-router-dom';
 
-import { THREE_CIRCLE_IMAGE } from '../../constant';
-
 const Container = styled.div`
 	height: 100%;
 	margin: 0 auto;
@@ -24,7 +22,11 @@ const FormWrapper = styled.div`
 const Auth = () => {
 	return (
 		<Container>
-			<ThreeCircleImage height={583} width={601} src={THREE_CIRCLE_IMAGE} />
+			<ThreeCircleImage
+				height={583}
+				width={601}
+				src='/images/three_circle.png'
+			/>
 			<FormWrapper>
 				<Outlet />
 			</FormWrapper>
