@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { colors } from '../../../constant/styles';
 
 import { UpArrow, DownArrow } from '../../../icons';
 import { ImageWrapper } from '../Actor';
@@ -73,6 +74,10 @@ const Title = styled.div`
 	padding-inline: 15px;
 	width: 100%;
 	align-items: center;
+
+	svg {
+		fill: ${colors.grey};
+	}
 `;
 const ColorsContainer = styled.div`
 	max-width: 501px;

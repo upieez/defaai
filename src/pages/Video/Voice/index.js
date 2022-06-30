@@ -2,6 +2,9 @@ import styled from 'styled-components';
 
 const Container = styled.div`
 	margin-top: 29px;
+	display: flex;
+	flex-direction: column;
+	width: min-content;
 
 	> img {
 		margin-bottom: 18px;

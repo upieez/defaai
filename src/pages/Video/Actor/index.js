@@ -35,7 +35,7 @@ const Container = styled.div`
 	display: flex;
 	flex-wrap: wrap;
 	margin-top: 14px;
-	width: 65%;
+	max-width: 485px;
 
 	> div {
 		margin-right: 11px;
