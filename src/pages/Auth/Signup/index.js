@@ -53,7 +53,14 @@ const Signup = () => {
 				</Link>
 			</ButtonWrapper>
 			<TextWrapper>
-				Already user? <a href='/auth/login'>Login</a>
+				Already user?{' '}
+				<Link
+					to='/auth/login'
+					onClick={() => {
+						sessionStorage.setItem('loggedIn', 'true');
+					}}>
+					Login
+				</Link>
 			</TextWrapper>
 		</>
 	);

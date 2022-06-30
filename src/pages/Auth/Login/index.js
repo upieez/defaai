@@ -52,7 +52,14 @@ const Login = () => {
 				</Link>
 			</ButtonWrapper>
 			<TextWrapper>
-				New here? <a href='/auth/signup'>Signup</a>
+				New here?{' '}
+				<Link
+					to='/auth/signup'
+					onClick={() => {
+						sessionStorage.setItem('loggedIn', 'true');
+					}}>
+					Signup
+				</Link>
 			</TextWrapper>
 		</>
 	);

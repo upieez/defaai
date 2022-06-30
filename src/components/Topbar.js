@@ -86,7 +86,12 @@ const Logout = () => {
 	return (
 		<div>
 			<NavLink to='auth/login'>
-				<LogoutButton>Logout</LogoutButton>
+				<LogoutButton
+					onClick={() => {
+						sessionStorage.removeItem('loggedIn');
+					}}>
+					Logout
+				</LogoutButton>
 			</NavLink>
 		</div>
 	);

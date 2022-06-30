@@ -1,5 +1,6 @@
+import { useEffect } from 'react';
 import styled from 'styled-components';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 
 import Main from './Main';
 import Sidebar from './components/Sidebar';
@@ -26,6 +27,18 @@ const Container = styled.div`
 `;
 
 function App() {
+	const navigate = useNavigate();
+
+	useEffect(() => {
+		const hasLoggedIn = sessionStorage.getItem('loggedIn');
+
+		if (hasLoggedIn) {
+			navigate('/video/actor');
+		} else {
+			navigate('/auth/login');
+		}
+	}, []);
+
 	return (
 		<Container>
 			<Sidebar />
