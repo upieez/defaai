@@ -5,6 +5,11 @@ import FilterDownArrow from '../../../icons/FilterDownArrow';
 
 const Container = styled.div`
 	margin-top: 57px;
+	overflow: auto;
+
+	@media only screen and (max-width: 400px) {
+		width: 250px;
+	}
 `;
 
 const Table = styled.table`

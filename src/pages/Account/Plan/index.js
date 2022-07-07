@@ -16,10 +16,19 @@ const PlanButton = styled(Button)`
 const Container = styled.div`
 	margin-top: 73px;
 	display: flex;
-	overflow: auto;
 
 	:not(:first-child) {
 		margin-left: 32px;
+	}
+
+	@media only screen and (max-width: 400px) {
+		display: block;
+		height: 550px;
+		overflow: scroll;
+
+		:not(:first-child) {
+			margin-left: 0px;
+		}
 	}
 `;
 
@@ -58,7 +67,6 @@ const Card = styled.div`
 	width: 260px;
 	border-radius: 10px;
 	padding: 24px;
-	overflow: auto;
 
 	${(props) =>
 		props.currentPlan &&
@@ -75,6 +83,10 @@ const Card = styled.div`
 			color: ${colors.white};
 		}
 	`}
+
+	@media only screen and (max-width: 400px) {
+		display: inline-block;
+	}
 `;
 
 const Plan = () => {

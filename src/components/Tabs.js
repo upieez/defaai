@@ -4,6 +4,7 @@ import { colors } from '../constant/styles';
 
 const Container = styled.div`
 	display: flex;
+	width: inherit;
 
 	> a,
 	a:hover,
@@ -17,10 +18,16 @@ const Container = styled.div`
 			color: ${colors.blue};
 		}
 	}
+
+	@media only screen and (max-width: 400px) {
+		white-space: nowrap;
+		overflow: scroll;
+	}
 `;
 
 const Tabs = ({ className, children }) => {
 	return <Container className={className}>{children}</Container>;
+	// return null;
 };
 
 export default Tabs;

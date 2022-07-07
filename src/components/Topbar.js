@@ -16,14 +16,23 @@ const Container = styled.div`
 	border-bottom: ${(props) => props.isAuthPath && '0'};
 	display: flex;
 	justify-content: space-between;
+	flex-wrap: wrap;
 `;
 
 const Header = styled.h1`
 	font-size: 22px;
+
+	@media only screen and (max-width: 400px) {
+		font-size: 12px;
+	}
 `;
 
 const HeaderButton = styled(Button)`
 	margin-right: 20px;
+
+	@media only screen and (max-width: 400px) {
+		font-size: 12px;
+	}
 `;
 
 const SaveButton = styled(HeaderButton)`
@@ -35,6 +44,10 @@ const LogoutButton = styled(Button)`
 	color: ${colors.red};
 	background-color: transparent;
 	font-size: 15px;
+
+	@media only screen and (max-width: 400px) {
+		font-size: 12px;
+	}
 `;
 
 const TitleWrapper = styled.div`
@@ -138,6 +151,10 @@ const OverlayDescription = styled.div`
 	color: #666666;
 	width: 722px;
 	font-size: 15px;
+
+	@media only screen and (max-width: 400px) {
+		width: auto;
+	}
 `;
 
 const TagsContainer = styled.div`
@@ -151,6 +168,15 @@ const TagsContainer = styled.div`
 
 const ButtonWrapper = styled.div`
 	margin-top: 23px;
+`;
+
+const IconWrapper = styled.div`
+	svg {
+		@media only screen and (max-width: 400px) {
+			height: 8px;
+			width: 8px;
+		}
+	}
 `;
 
 const Topbar = () => {
@@ -167,12 +193,12 @@ const Topbar = () => {
 				<TitleWrapper>
 					<Header>{title[location.pathname]}</Header>
 					{isVideoPath && (
-						<div
+						<IconWrapper
 							onClick={() => {
 								setOverlay(true);
 							}}>
 							<DownArrow />
-						</div>
+						</IconWrapper>
 					)}
 				</TitleWrapper>
 			)}

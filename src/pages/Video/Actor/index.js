@@ -44,6 +44,13 @@ const Container = styled.div`
 	> p {
 		text-align: center;
 	}
+
+	@media only screen and (max-width: 400px) {
+		display: block;
+		white-space: nowrap;
+		overflow: scroll;
+		height: inherit;
+	}
 `;
 
 export const ImageWrapper = styled.div`
@@ -55,6 +62,10 @@ export const ImageWrapper = styled.div`
 		color: #666666;
 		line-height: 18px;
 		margin-top: -6px;
+	}
+
+	@media only screen and (max-width: 400px) {
+		display: inline-block;
 	}
 `;
 

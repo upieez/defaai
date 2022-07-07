@@ -7,10 +7,21 @@ import VideoPreview from '../../components/VideoPreview';
 const Container = styled.div`
 	width: 100%;
 	display: flex;
+
+	@media only screen and (max-width: 400px) {
+		flex-wrap: wrap;
+	}
 `;
 
 const Options = styled.div`
 	margin-left: 40px;
+
+	@media only screen and (max-width: 400px) {
+		margin-top: 20px;
+		margin-left: 0;
+		height: 150px;
+		width: 200px;
+	}
 `;
 
 const Video = () => {

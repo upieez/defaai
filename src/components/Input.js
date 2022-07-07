@@ -11,6 +11,10 @@ export const Label = styled.label`
 	margin-bottom: 6px;
 	line-height: 21px;
 	font-weight: 400;
+
+	@media only screen and (max-width: 400px) {
+		width: auto;
+	}
 `;
 
 export const TextInput = styled.input`
@@ -25,6 +29,10 @@ export const TextInput = styled.input`
 
 	&:focus {
 		border: 1px solid #5c90f3;
+	}
+
+	@media only screen and (max-width: 400px) {
+		width: 100%;
 	}
 `;
 

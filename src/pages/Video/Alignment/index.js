@@ -8,6 +8,12 @@ const Container = styled.div`
 	> * {
 		margin-right: 22px;
 	}
+
+	@media only screen and (max-width: 400px) {
+		display: block;
+		white-space: nowrap;
+		overflow: scroll;
+	}
 `;
 
 const AlignmentButton = styled(Button)`

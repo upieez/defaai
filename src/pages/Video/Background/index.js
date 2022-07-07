@@ -37,6 +37,10 @@ const mapImages = [
 
 const Container = styled.div`
 	margin-top: 29px;
+
+	@media only screen and (max-width: 400px) {
+		width: 200px;
+	}
 `;
 const ImagesContainer = styled.div`
 	width: 501px;
@@ -49,6 +53,14 @@ const ImagesContainer = styled.div`
 	flex-wrap: wrap;
 	margin-top: 14px;
 	justify-content: space-between;
+
+	@media only screen and (max-width: 400px) {
+		width: inherit;
+		display: block;
+		white-space: nowrap;
+		overflow: scroll;
+		height: auto;
+	}
 `;
 const ImagePreview = styled.div`
 	display: flex;
@@ -66,6 +78,13 @@ const ImagePreview = styled.div`
 
 	> p {
 		text-align: center;
+	}
+
+	@media only screen and (max-width: 400px) {
+		width: inherit;
+		display: block;
+		white-space: nowrap;
+		overflow: scroll;
 	}
 `;
 const Title = styled.div`

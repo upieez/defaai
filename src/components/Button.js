@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 import { colors } from '../constant/styles';
 
-const Wrapper = styled.button`
-	width: fit-content;
+export const Wrapper = styled.button`
+	width: max-content;
 	height: 35px;
 	border-radius: 6px;
 	border-style: none;

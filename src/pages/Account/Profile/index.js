@@ -62,6 +62,10 @@ const InputContainer = styled.div`
 	justify-content: space-between;
 	margin-top: 23px;
 	margin-bottom: 40px;
+
+	@media only screen and (max-width: 400px) {
+		width: auto;
+	}
 `;
 
 const Profile = () => {

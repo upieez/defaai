@@ -15,10 +15,24 @@ const Card = styled.div`
 
 	padding: 5px;
 	padding-bottom: 14px;
+
+	@media only screen and (max-width: 400px) {
+		width: 200px;
+	}
 `;
 
 const ImageContainer = styled.div`
 	position: relative;
+
+	img {
+		width: 276px;
+		height: 155px;
+
+		@media only screen and (max-width: 400px) {
+			width: 190px;
+			height: 112px;
+		}
+	}
 `;
 
 const IconContainer = styled.div`
@@ -37,6 +51,7 @@ const TagsContainer = styled.div`
 	display: flex;
 	margin-top: 13px;
 	justify-content: center;
+	flex-wrap: wrap;
 `;
 
 const Browse = () => {

@@ -9,6 +9,10 @@ const Container = styled.div`
 	> img {
 		margin-bottom: 18px;
 	}
+
+	@media only screen and (max-width: 400px) {
+		width: 200px;
+	}
 `;
 
 const Voice = () => {

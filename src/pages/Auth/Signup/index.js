@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 import { colors } from '../../../constant/styles';
-import Input, { Label } from '../../../components/Input';
+import Input, { Label, TextInput } from '../../../components/Input';
 import Button from '../../../components/Button';
 
 const ButtonWrapper = styled.div`
@@ -10,11 +10,29 @@ const ButtonWrapper = styled.div`
 	width: inherit;
 `;
 
+const StyledInput = styled(Input)`
+	${TextInput} {
+		@media only screen and (max-width: 400px) {
+			width: 100%;
+		}
+	}
+`;
+
 const PasswordInput = styled(Input)`
 	${Label} {
 		width: 360px;
 		display: flex;
 		justify-content: space-between;
+
+		@media only screen and (max-width: 400px) {
+			width: auto;
+		}
+	}
+
+	${TextInput} {
+		@media only screen and (max-width: 400px) {
+			width: 100%;
+		}
 	}
 
 	p {
@@ -41,8 +59,8 @@ const TextWrapper = styled.div`
 const Signup = () => {
 	return (
 		<>
-			<Input name='fullName'>Full name</Input>
-			<Input name='email'>Email address</Input>
+			<StyledInput name='fullName'>Full name</StyledInput>
+			<StyledInput name='email'>Email address</StyledInput>
 			<PasswordInput name='password' type='password'>
 				Password
 				<p>Strong</p>

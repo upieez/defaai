@@ -21,11 +21,21 @@ const Container = styled.div`
 	display: flex;
 	flex-direction: column;
 	padding: 20px;
+
+	@media only screen and (max-width: 400px) {
+		width: 200px;
+	}
 `;
 
 const PreviewContainer = styled.div`
 	position: relative;
 	margin-bottom: 18px;
+
+	@media only screen and (max-width: 400px) {
+		img {
+			width: 100%;
+		}
+	}
 `;
 
 const PreviewButtonWrapper = styled.div`
@@ -46,6 +56,18 @@ const ScriptContainer = styled.div`
 	background-color: ${colors.white};
 	padding: 19px 34px 22px 30px;
 	color: ${colors.grey};
+
+	@media only screen and (max-width: 400px) {
+		width: 100%;
+
+		p {
+			display: -webkit-box;
+			-webkit-line-clamp: 3;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+	}
 `;
 
 const ListenButtonWrapper = styled.div`
