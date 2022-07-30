@@ -22,3 +22,6 @@
   - `/constant`
   - `/icons`
   - `/pages`
+  
+## Future Feature
+- Work well in other frameworks 
